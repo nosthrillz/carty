@@ -1,6 +1,7 @@
 import HomePage from "./pages/HomePage";
 import CartDetailsPage from "./pages/CartDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
+import CheckoutPage from "./pages/CheckoutPage";
 import CartIcon from "./components/layout/CartIcon";
 
 import {
@@ -43,6 +44,9 @@ function _app() {
           </Route>
           <Route path="/cart" exact>
             <CartDetailsPage />
+          </Route>
+          <Route path="/checkout" exact>
+            <CheckoutPage />
           </Route>
         </Switch>
       </main>

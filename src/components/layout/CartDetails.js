@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 
 import {
@@ -15,9 +17,11 @@ const CartDetails = (props) => {
   const items = useSelector((state) => state.cart.items);
   const total = useSelector((state) => state.cart.total);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const checkoutHandler = (e) => {
     e.preventDefault();
+    history.push("/checkout");
   };
 
   //TODO: memoize price*quantity
@@ -46,7 +50,9 @@ const CartDetails = (props) => {
                 <FontAwesomeIcon icon={faChevronDown} />
               </Button>
             </div>
-            <h2 className="cart-item-price">{item.price * item.qty}</h2>
+            <h2 className="cart-item-price">
+              {(item.price * item.qty).toFixed(2)}
+            </h2>
             <Button type="close" onClick={() => dispatch(delFromCart(item))}>
               x
             </Button>
@@ -55,10 +61,10 @@ const CartDetails = (props) => {
       </ul>
       <div className="cart-details-total">
         <p>Total:</p>
-        <p>{total} CHF</p>
+        <p>{total.toFixed(2)} CHF</p>
       </div>
       <div className="cart-details-actions">
-        <Button type="primary" onClick={checkoutHandler} size="lg">
+        <Button type="primary" onClick={checkoutHandler}>
           Checkout
         </Button>
       </div>

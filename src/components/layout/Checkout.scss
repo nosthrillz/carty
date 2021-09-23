@@ -1,0 +1,12 @@
+@import '../../styles/__mixins.scss';
+
+.checkout-wrapper {
+    @include FlexColCenter;
+    max-width: 500px;
+    overflow: auto;
+    gap: 3rem;
+
+    >h1 {
+        font-size: 4rem;
+    }
+}

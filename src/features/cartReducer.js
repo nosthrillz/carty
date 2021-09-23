@@ -36,8 +36,7 @@ export const cartSlice = createSlice({
         });
       }
 
-      state.total =
-        Math.round((state.total + action.payload.price) * 1e2) / 1e2;
+      state.total = state.total + action.payload.price;
       state.count++;
     },
     delFromCart: (state, action) => {

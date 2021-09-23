@@ -62,6 +62,7 @@
     @include PadHalfAndWidth100;
     @include FlexRowCenter;
     justify-content: space-between;
+    font-size: 1.25rem;
     font-weight: bold;
     border-top: 1px solid $grey-accent;
 }

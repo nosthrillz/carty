@@ -1,8 +1,10 @@
+import Home from "../components/layout/Home";
+
 const HomePage = () => {
   return (
-    <div>
-      <p>HomePage</p>
-    </div>
+    <>
+      <Home />
+    </>
   );
 };
 
