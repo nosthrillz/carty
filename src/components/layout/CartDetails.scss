@@ -1,0 +1,80 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins.scss';
+
+.cart-details-wrapper {
+    background-color: $blue-mid;
+    @include FlexColCenter;
+    max-width: 500px;
+    overflow: auto;
+
+    >h1 {
+        margin: 1rem;
+        font-size: 1.5rem;
+    }
+
+    section {
+
+        >ul {
+            padding: 0;
+            margin: 0;
+
+            
+        }
+    }
+}
+
+.cart-details-item-wrapper {
+    list-style: none;
+    @include PadHalfAndWidth100;
+    @include FlexRowCenter;
+    border-top: 1px solid $grey-accent;
+
+    .cart-item-image {
+        flex: 1;
+        width: 25%;
+        height: auto;
+    }
+    
+    .cart-item-title {
+        flex: 5;
+        font-size: 1rem;
+    }
+    
+    .cart-item-qty {
+        flex: 1;
+        font-size: .8rem;
+        font-weight: normal;
+        @include FlexColCenter;
+
+        >button {
+            padding: 3px;
+        }
+    }
+    
+    .cart-item-price {
+        flex: 3;
+        font-size: 1rem;
+        text-align: right;
+    }
+}
+
+.cart-details-total {
+    @include PadHalfAndWidth100;
+    @include FlexRowCenter;
+    justify-content: space-between;
+    font-weight: bold;
+    border-top: 1px solid $grey-accent;
+}
+
+.cart-details-actions {
+    @include PadHalfAndWidth100;
+    @include FlexRowCenter;
+}
+
+.cart-details-empty {
+    @include PadHalfAndWidth100;
+
+    >* {
+        @include PadHalfAndWidth100;
+    }
+}

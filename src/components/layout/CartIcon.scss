@@ -1,0 +1,30 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.cart-icon-wrapper {
+    display: flex;
+    margin-right: 10px;
+
+    .cart-icon-bubble {
+        position: relative;
+        right: 50%;
+        border-radius: 100%;
+        width: 20px;
+        height: 20px;
+        background-color: $red-accent;
+        color: $text-accent;
+        font-size: 1rem;
+        font-weight: bold;
+        @include FlexRowCenter;
+        margin-right: -20px;
+    }
+
+    &:hover .cart-icon-bubble {
+        background-color: $red-accent-hover;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}
+

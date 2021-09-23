@@ -1,0 +1,17 @@
+@mixin FlexColCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin FlexRowCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin PadHalfAndWidth100 {
+    width: calc(100% - 1rem);
+    padding: .5rem;
+}

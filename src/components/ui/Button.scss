@@ -1,0 +1,49 @@
+@import '../../styles/__variables.scss';
+
+.btn {
+    all:unset;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    background-color: $blue-accent;
+    width: fit-content;
+
+    &.lg {
+        width: 100%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: $blue-accent-hover;
+    }
+
+    &.secondary {
+        background-color: $grey-accent;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $grey-accent-hover;
+        }
+    }
+
+    &.close {
+        color: $red-accent;
+        background-color: unset;
+
+        &:hover {
+            cursor: pointer;
+            color: $red-accent-hover;
+        }
+    }
+
+    &.empty {
+        color: $text-accent;
+        background-color: unset;
+
+        &:hover {
+            cursor: pointer;
+            color: $text-accent-hover;
+        }
+    }
+}

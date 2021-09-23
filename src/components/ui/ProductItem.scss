@@ -1,0 +1,33 @@
+@import '../../styles/_mixins.scss';
+
+.product-item-title {
+    flex: 5;
+    font-size: 1rem;
+}
+
+.product-item-content {
+    @include FlexRowCenter;
+
+    .product-item-image {
+        flex: 1;
+        width: 25%;
+        height: auto;
+    }
+
+    .product-item-description {
+        flex: 1;
+        font-size: .8rem;
+        text-align: left;
+        font-weight: normal;
+
+        >p {
+            margin: .5rem 0;
+        }
+    }
+}
+
+.product-item-price {
+    font-size: 1rem;
+    text-align: right;
+    margin: .5rem;
+}
