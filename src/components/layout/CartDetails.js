@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { cartSelector } from "../../features/selectors";
 
 import {
   delFromCart,
@@ -11,10 +12,11 @@ import Button from "../ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import "./CartDetails.scss";
+import { priceXqty } from "../../utils/priceXqty";
 
 const CartDetails = (props) => {
-  const items = useSelector((state) => state.cart.items);
-  const total = useSelector((state) => state.cart.total);
+  const { items, total } = useSelector(cartSelector);
+
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -22,8 +24,6 @@ const CartDetails = (props) => {
     e.preventDefault();
     history.push("/checkout");
   };
-
-  //TODO: memoize price*quantity
 
   const emptyCart = (
     <section>
@@ -50,7 +50,7 @@ const CartDetails = (props) => {
               </Button>
             </div>
             <h2 className="cart-item-price">
-              {(item.price * item.qty).toFixed(2)}
+              {priceXqty(item.price, item.qty).toFixed(2)}
             </h2>
             <Button type="close" onClick={() => dispatch(delFromCart(item))}>
               x
@@ -72,7 +72,7 @@ const CartDetails = (props) => {
 
   return (
     <div className="cart-details-wrapper">
-      <h1>Your shopping cart</h1>
+      <h1>{props.title || "Your shopping cart"}</h1>
       {items.length > 0 ? filledCart : emptyCart}
     </div>
   );

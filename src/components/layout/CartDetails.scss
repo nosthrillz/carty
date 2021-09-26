@@ -4,6 +4,7 @@
 .cart-details-wrapper {
     background-color: $blue-mid;
     @include FlexColCenter;
+    width: 100%;
     max-width: 500px;
     overflow: auto;
 

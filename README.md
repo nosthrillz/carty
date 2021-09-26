@@ -36,17 +36,20 @@ The project is structured as follows:
 - `index.js` - the store provider for the app
 - `App.js` - root component with react-router, displaying pages depending on route
 - `store/` - Redux store
-- `features/` - the reducer slices
+- `features/` - the reducers and selectors
 - `styles/` - global styles and scss mixins/variables
 - `components/ui` - the "atoms" - low-level components
 - `components/layout` - the "molecules" - components that reuse the UI components
 - `pages/` - the "organisms" - high level pages which use layouts.
+- `utils` - utility functions (e.g. memoize certain operations)
+
 # Features under construction
 
 The following features are still under construction:
 
-- [ ] Memoization for 'expensive' operations
-- [ ] Preview cart on CartIcon hover
+- [ x ] Memoization for 'expensive' operations
+- [ x ] Preview cart on CartIcon hover
+- [ ] Beautify code & imports
 - [ ] Save store to localStorage
 - [ ] Connect to an api for data fetching + refactor to accomodate api specs
 - [ ] Write tests

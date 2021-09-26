@@ -1,22 +1,22 @@
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../features/cartReducer";
+import { productSelector } from "../../features/selectors";
 
 import Button from "../ui/Button";
 import "./ProductDetails.scss";
 
 const ProductDetails = (props) => {
-  const items = useSelector((state) => state.products.items);
+  const { items } = useSelector(productSelector);
   const dispatch = useDispatch();
 
   const addItemHandler = (item) => {
-    console.log(item);
     dispatch(addToCart(item));
   };
 
   if (items.length > 0)
     return (
       <div className="product-details-wrapper">
-        <h1>Your favorite shop</h1>
+        <h1>Your favorite products</h1>
         <section>
           <ul>
             {items?.map((item, idx) => (

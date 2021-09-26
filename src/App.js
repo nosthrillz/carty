@@ -2,7 +2,7 @@ import HomePage from "./pages/HomePage";
 import CartDetailsPage from "./pages/CartDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import CheckoutPage from "./pages/CheckoutPage";
-import CartIcon from "./components/layout/CartIcon";
+import HeaderCart from "./components/layout/HeaderCart";
 
 import {
   BrowserRouter as Router,
@@ -10,14 +10,11 @@ import {
   Route,
   NavLink,
 } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThList } from "@fortawesome/free-solid-svg-icons";
 
-function _app() {
-  const cartCount = useSelector((state) => state.cart.count);
-
+function App() {
   return (
     <Router>
       <header>
@@ -30,10 +27,11 @@ function _app() {
             <FontAwesomeIcon icon={faThList} size="lg" />
           </NavLink>
           <NavLink to="/cart" activeClassName="active">
-            <CartIcon cartCount={cartCount} />
+            <HeaderCart />
           </NavLink>
         </nav>
       </header>
+
       <main>
         <Switch>
           <Route path="/" exact>
@@ -54,4 +52,4 @@ function _app() {
   );
 }
 
-export default _app;
+export default App;
