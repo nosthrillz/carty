@@ -30,14 +30,13 @@
 
 .header-cart-wrapper {
     position: relative;
-    width: 100%;
     height: 0;
     color: $text-accent;
 
     .header-cart-details-wrapper {
         position: absolute;
         right:0;
-        width: 100%;
+        width: 350px;
 
         // modify styles
         .cart-details-wrapper {
