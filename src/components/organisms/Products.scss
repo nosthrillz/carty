@@ -11,9 +11,6 @@
         margin: 1rem;
         font-size: 1.5rem;
     }
-
-    >section {
-        
         >ul {
             padding: .5rem;
             margin: 0;
@@ -26,9 +23,7 @@
             @media screen and (min-width: 1000px) {
                 grid-template-columns: repeat(2,1fr);
             }
-
         }
-    }
 
     @media screen and (min-width: 1000px) {
         min-width: 1000px;
@@ -40,7 +35,7 @@ li.product-details-item-wrapper {
     @include FlexColCenter;
     list-style: none;
     background-color: $grey-accent;
-    
+
     @import '../../styles/_mixins.scss';
 
     .product-item-title {

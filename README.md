@@ -47,9 +47,9 @@ The project is structured as follows:
 
 The following features are still under construction:
 
-- [ x ] Memoization for 'expensive' operations
-- [ x ] Preview cart on CartIcon hover
-- [ ] Beautify code & imports
+- X Memoization for 'expensive' operations
+- X Preview cart on CartIcon hover
+- X Beautify code & imports
 - [ ] Save store to localStorage
 - [ ] Connect to an api for data fetching + refactor to accomodate api specs
 - [ ] Write tests

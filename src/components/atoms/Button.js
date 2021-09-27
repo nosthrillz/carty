@@ -1,3 +1,4 @@
+// Libs/styles
 import "./Button.scss";
 
 const Button = (props) => {

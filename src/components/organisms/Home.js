@@ -1,6 +1,8 @@
-import Button from "../ui/Button";
+// Functionality
 import { useHistory } from "react-router-dom";
-
+// Components
+import Button from "../atoms/Button";
+// Libs/styles
 import "./Home.scss";
 
 const Home = () => {

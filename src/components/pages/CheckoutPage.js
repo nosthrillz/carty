@@ -1,4 +1,5 @@
-import Checkout from "../components/layout/Checkout";
+// Components
+import Checkout from "../molecules/Checkout";
 
 const CheckoutPage = () => {
   return (

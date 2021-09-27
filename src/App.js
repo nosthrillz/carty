@@ -1,23 +1,18 @@
-import HomePage from "./pages/HomePage";
-import CartDetailsPage from "./pages/CartDetailsPage";
-import ProductsPage from "./pages/ProductsPage";
-import CheckoutPage from "./pages/CheckoutPage";
-
-import HeaderCart from "./components/layout/HeaderCart";
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
-
+// Functionality
+import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+// Components
+import HomePage from "./components/pages/HomePage";
+import CartDetailsPage from "./components/pages/CartDetailsPage";
+import ProductsPage from "./components/pages/ProductsPage";
+import CheckoutPage from "./components/pages/CheckoutPage";
+import HeaderCart from "./components/organisms/HeaderCart";
+// Libs/Styles
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThList } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <header>
         <NavLink to="/" activeClassName="">
           <h1>Carty Inc.</h1>
@@ -49,7 +44,7 @@ function App() {
           </Route>
         </Switch>
       </main>
-    </Router>
+    </BrowserRouter>
   );
 }
 

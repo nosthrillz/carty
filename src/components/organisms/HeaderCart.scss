@@ -29,7 +29,7 @@
 }
 
 .header-cart-wrapper {
-    position: relative; 
+    position: relative;
     width: 100%;
     height: 0;
     color: $text-accent;
@@ -37,11 +37,16 @@
     .header-cart-details-wrapper {
         position: absolute;
         right:0;
-        width: 350px;
+        width: 100%;
 
         // modify styles
-        h1 {
+        .cart-details-wrapper {
+            box-shadow: rgba(0,0,0,.3) 0 0 5px 5px;
+        }
+
+        h1, .cart-details-total, p {
             font-size: 1rem;
+            text-align: center;
         }
         button, .cart-details-actions {
             display: none;
@@ -53,12 +58,9 @@
         .cart-details-item-wrapper {
             padding: .5rem;
         }
-        
+
         .cart-details-wrapper>h1 {
             margin: .5rem;
-            font-size: 1rem;
-        }
-        .cart-details-total {
             font-size: 1rem;
         }
     }
