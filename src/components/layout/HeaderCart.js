@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import CartDetails from "./CartDetails";
+import Cart from "./Cart";
 import { useSelector } from "react-redux";
 import { cartSelector } from "../../features/selectors";
 
@@ -28,15 +28,15 @@ const HeaderCart = () => {
     <>
       <div
         className="header-cart-icon-wrapper"
-        onMouseEnter={displayCart}
-        onMouseLeave={hideCart}
+        onMouseOver={displayCart}
+        onMouseOut={hideCart}
       >
         <FontAwesomeIcon icon={faShoppingCart} size="lg" />
         {count > 0 && <div className="header-cart-icon-bubble">{count}</div>}
       </div>
       <div className="header-cart-wrapper">
         <div className="header-cart-details-wrapper">
-          {showCart && !isMobile && <CartDetails title="Preview cart" />}
+          {showCart && !isMobile && <Cart title="Preview cart" />}
         </div>
       </div>
     </>
