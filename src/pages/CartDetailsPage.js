@@ -1,9 +1,9 @@
-import CartDetails from "../components/layout/CartDetails";
+import Cart from "../components/layout/Cart";
 
 const CartDetailsPage = () => {
   return (
     <>
-      <CartDetails />
+      <Cart />
     </>
   );
 };

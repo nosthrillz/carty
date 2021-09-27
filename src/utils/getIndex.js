@@ -3,7 +3,7 @@ const memoizedIndex = [];
 export const getIndex = (state, action) => {
   const id = action.payload.id;
 
-  if (memoizedIndex[id] == !undefined) {
+  if (memoizedIndex[id] === !undefined) {
     return memoizedIndex[id];
   }
 

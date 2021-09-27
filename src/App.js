@@ -2,6 +2,7 @@ import HomePage from "./pages/HomePage";
 import CartDetailsPage from "./pages/CartDetailsPage";
 import ProductsPage from "./pages/ProductsPage";
 import CheckoutPage from "./pages/CheckoutPage";
+
 import HeaderCart from "./components/layout/HeaderCart";
 
 import {

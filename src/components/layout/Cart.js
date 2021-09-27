@@ -11,10 +11,10 @@ import {
 import Button from "../ui/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp, faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import "./CartDetails.scss";
+import "./Cart.scss";
 import { priceXqty } from "../../utils/priceXqty";
 
-const CartDetails = (props) => {
+const Cart = (props) => {
   const { items, total } = useSelector(cartSelector);
 
   const dispatch = useDispatch();
@@ -73,9 +73,9 @@ const CartDetails = (props) => {
   return (
     <div className="cart-details-wrapper">
       <h1>{props.title || "Your shopping cart"}</h1>
-      {items.length > 0 ? filledCart : emptyCart}
+      {!!items ? filledCart : emptyCart}
     </div>
   );
 };
 
-export default CartDetails;
+export default Cart;
