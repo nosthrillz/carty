@@ -35,12 +35,13 @@ The project is structured as follows:
 
 - `index.js` - the store provider for the app
 - `App.js` - root component with react-router, displaying pages depending on route
+- `components/atoms` - low-level components
+- `components/molecules` - components that reuse the atoms
+- `components/organisms` - components that reuse the molecules and atoms
+- `components/pages/` - high level pages which use organisms, molecules, and atoms.
 - `store/` - Redux store
 - `features/` - the reducers and selectors
 - `styles/` - global styles and scss mixins/variables
-- `components/ui` - the "atoms" - low-level components
-- `components/layout` - the "molecules" - components that reuse the UI components
-- `pages/` - the "organisms" - high level pages which use layouts.
 - `utils` - utility functions (e.g. memoize certain operations)
 
 # Features under construction
