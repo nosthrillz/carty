@@ -1,11 +1,14 @@
+// Functionality
 import { useHistory } from "react-router-dom";
-import Button from "../ui/Button";
+// Components
+import Button from "../atoms/Button";
+// Libs/styles
 import "./Checkout.scss";
 
 const Checkout = () => {
   const history = useHistory();
 
-  const goHome = (e) => {
+  const goHome = () => {
     history.push("/products");
   };
   return (

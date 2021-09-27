@@ -1,4 +1,5 @@
-import Home from "../components/layout/Home";
+// Components
+import Home from "../organisms/Home";
 
 const HomePage = () => {
   return (

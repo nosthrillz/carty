@@ -1,4 +1,5 @@
-import Products from "../components/layout/Products";
+// Components
+import Products from "../organisms/Products";
 
 const ProductsPage = () => {
   return (

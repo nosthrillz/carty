@@ -1,12 +1,13 @@
+// Functionality
 import { useState } from "react";
+import { useSelector } from "react-redux";
+// Components
+import Cart from "../molecules/Cart";
+// Libs/styles
+import { cartSelector } from "../../features/selectors";
+import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import Cart from "./Cart";
-import { useSelector } from "react-redux";
-import { cartSelector } from "../../features/selectors";
-
-import { useMediaQuery } from "react-responsive";
-
 import "./HeaderCart.scss";
 
 const HeaderCart = () => {
@@ -14,13 +15,11 @@ const HeaderCart = () => {
   const { count } = useSelector(cartSelector);
   const isMobile = useMediaQuery({ query: `(max-width: 500px)` });
 
-  const displayCart = (e) => {
-    e.stopPropagation();
+  const displayCart = () => {
     !isMobile && setShowCart(true);
   };
 
-  const hideCart = (e) => {
-    e.stopPropagation();
+  const hideCart = () => {
     showCart && setShowCart(false);
   };
 

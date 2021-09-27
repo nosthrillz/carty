@@ -1,4 +1,6 @@
+// Functionality
 import { configureStore } from "@reduxjs/toolkit";
+// Libs/styles
 import cartReducer from "../features/cartReducer";
 import productReducer from "../features/productReducer";
 

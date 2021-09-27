@@ -1,4 +1,5 @@
-import Cart from "../components/layout/Cart";
+// Components
+import Cart from "../molecules/Cart";
 
 const CartDetailsPage = () => {
   return (

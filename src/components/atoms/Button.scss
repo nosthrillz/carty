@@ -18,15 +18,6 @@
         background-color: $blue-accent-hover;
     }
 
-    &.secondary {
-        background-color: $grey-accent;
-
-        &:hover {
-            cursor: pointer;
-            background-color: $grey-accent-hover;
-        }
-    }
-
     &.close {
         color: $red-accent;
         background-color: unset;
