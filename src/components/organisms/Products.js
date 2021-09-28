@@ -14,6 +14,13 @@ const Products = (props) => {
   const dispatch = useDispatch();
 
   if (!items) return <h1>Something went wrong...</h1>;
+  if (!items.length)
+    return (
+      <div className="loading">
+        <h1>Loading your products...</h1>
+        <div className="spinner"></div>
+      </div>
+    );
   return (
     <div className="product-details-wrapper">
       <h1>Your favorite products</h1>
