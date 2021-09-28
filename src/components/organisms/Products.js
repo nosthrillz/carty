@@ -1,14 +1,17 @@
 // Functionality
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 // Components
 import Button from "../atoms/Button";
 // Libs/styles
 import { cartActions } from "../../features/cartReducer";
+import { productSelector } from "../../features/selectors";
 import "./Products.scss";
+import "../../styles/loadingSpinner.scss";
 
 const CURRENCY = "CHF";
 
-const Products = ({ items }) => {
+const Products = () => {
+  const { items } = useSelector(productSelector);
   const dispatch = useDispatch();
 
   if (!items) return <h1>Something went wrong...</h1>;

@@ -10,7 +10,7 @@
 .spinner::after {
     content:"";
     grid-area: 1/1;
-    --c: radial-gradient(farthest-side,#25b09b 92%,#0000);
+    --c: radial-gradient(farthest-side,$blue-accent,$blue-mid);
     background:
       var(--c) 50%  0,
       var(--c) 50%  100%,

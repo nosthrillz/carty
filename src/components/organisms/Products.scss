@@ -81,4 +81,5 @@ li.product-details-item-wrapper {
 
 .loading {
     width: 100%;
+    @include FlexColCenter;
 }

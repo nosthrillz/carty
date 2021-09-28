@@ -51,8 +51,8 @@ The following features are still under construction:
 - X Memoization for 'expensive' operations
 - X Preview cart on CartIcon hover
 - X Beautify code & imports
-- [ ] Save store to localStorage
-- [ ] Connect to an api for data fetching + refactor to accomodate api specs
+- X Save store to localStorage
+- X Connect to an api for data fetching + refactor to accomodate api specs
 - [ ] Write tests
 
 # Tech stack

@@ -36,8 +36,12 @@ const Cart = (props) => {
       <ul>
         {items?.map((item, idx) => (
           <li key={idx} className="cart-details-item-wrapper">
-            <img className="cart-item-image" src={item.image} alt={item.name} />
-            <h1 className="cart-item-title">{item.name}</h1>
+            <img
+              className="cart-item-image"
+              src={item.image}
+              alt={item.title}
+            />
+            <h1 className="cart-item-title">{item.title}</h1>
             <div className="cart-item-qty">
               <Button
                 type="empty"

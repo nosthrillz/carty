@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// hardcoded initial product offering
 const initialState = {
   items: [],
 };
@@ -10,7 +9,8 @@ export const productSlice = createSlice({
   initialState,
   reducers: {
     add: (state, action) => {
-      state.items.push(action.payload);
+      !state.items.some((item) => item.id === action.payload.id) &&
+        state.items.push(action.payload);
     },
     del: (state, action) => {
       state.items = state.items.filter((item) => item !== action.payload);
