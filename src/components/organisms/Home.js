@@ -15,7 +15,10 @@ const Home = () => {
   return (
     <div className="home-wrapper">
       <h1>Welcome to Carty</h1>
-      <p>Start buying your favorite products</p>
+      <p>
+        Start buying your <a href="https://fakestoreapi.com/">fakestoreapi</a>{" "}
+        products
+      </p>
       <Button onClick={goToProducts}>See products</Button>
     </div>
   );
