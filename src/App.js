@@ -1,5 +1,7 @@
 // Functionality
 import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 // Components
 import HomePage from "./components/pages/HomePage";
 import CartDetailsPage from "./components/pages/CartDetailsPage";
@@ -7,10 +9,18 @@ import ProductsPage from "./components/pages/ProductsPage";
 import CheckoutPage from "./components/pages/CheckoutPage";
 import HeaderCart from "./components/organisms/HeaderCart";
 // Libs/Styles
+import getProducts from "./api/getProducts";
+import { productActions } from "./features/productReducer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThList } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    getProducts(dispatch, productActions);
+  }, [dispatch]);
+
   return (
     <BrowserRouter>
       <header>
